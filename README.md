@@ -4,9 +4,9 @@ Responsive E-commerce Website  template containing catalog, filters, product pag
 
 Technologies
 
-HTML
-CSS
-Javascript
+HTML </br>
+CSS  </br>
+Javascript </br>
 
 
 
