@@ -1,0 +1,17 @@
+Ecommerce website:intermediate
+
+sell(list)-> database information
+
+
+ buy_>show information to buyers
+
+home page 
+login page 
+cart page
+
+
+list product
+categories product show 
+
+
+
