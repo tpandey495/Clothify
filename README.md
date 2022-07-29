@@ -9,7 +9,7 @@ CSS  </br>
 Javascript </br>
 Node js <br/>
 Express js <br/>
-Ejs <br/>
+Handlebars<br/>
 MySql<br/>
 
 
