@@ -1,0 +1,142 @@
+@charset "UTF-8";
+:root {
+  --barney-start: #8e2de2;
+  --barney-stop: #4a00e0;
+  --barney-bg-color: #250070;   
+  --barney-color: rgba(255, 255, 255, 0.8);
+  --barney-submit-icon-color: #fff;
+  --barney-input-bg-color: rgba(0, 0, 0, 0.4);
+  --barney-input-icon-color: rgba(255, 255, 255, 0.3);
+  --barney-input-focus-icon-color: #e82777;
+  --barney-input-focus-bg-color: rgba(0, 0, 0, 0.7);
+  --barney-placeholder-color: rgba(255, 255, 255, 0.7);
+  --barney-submit-color: #fff;
+  --slate-start: #606c88;
+  --slate-stop: #3f4c6b;
+  --slate-bg-color: #343e58;
+  --slate-color: rgba(255, 255, 255, 0.8);
+  --slate-submit-icon-color: #fff;
+  --slate-input-bg-color: rgba(0, 0, 0, 0.4);
+  --slate-input-icon-color: rgba(255, 255, 255, 0.3);
+  --slate-input-focus-icon-color: #ffc329;
+  --slate-input-focus-bg-color: rgba(0, 0, 0, 0.5);
+  --slate-placeholder-color: rgba(255, 255, 255, 0.7);
+  --slate-submit-color: #fff;
+  --candy-start: #009fff;
+  --candy-stop: #ec2f4b;
+  --candy-bg-color: #00293d;
+  --candy-color: rgba(255, 255, 255, 0.8);
+  --candy-submit-icon-color: #fff;
+  --candy-input-bg-color: rgba(0, 0, 0, 0.4);
+  --candy-input-icon-color: rgba(255, 255, 255, 0.3);
+  --candy-input-focus-icon-color: #24b7ff;
+  --candy-input-focus-bg-color: rgba(0, 0, 0, 0.5);
+  --candy-placeholder-color: rgba(255, 255, 255, 0.7);
+  --candy-submit-color: #fff;
+  --firewatch-start: #ef473a;
+  --firewatch-stop: #cb2d3e;
+  --firewatch-bg-color: #8f150c;
+  --firewatch-color: rgba(255, 255, 255, 0.8);
+  --firewatch-submit-icon-color: #fff;
+  --firewatch-input-bg-color: rgba(0, 0, 0, 0.4);
+  --firewatch-input-icon-color: rgba(255, 255, 255, 0.3);
+  --firewatch-input-focus-icon-color: #ff362a;
+  --firewatch-input-focus-bg-color: rgba(0, 0, 0, 0.5);
+  --firewatch-placeholder-color: rgba(255, 255, 255, 0.7);
+  --firewatch-submit-color: #fff;
+  --citrus-start: #fdc012;
+  --citrus-stop: #f37335;
+  --citrus-bg-color: #c0560c;
+  --citrus-color: rgba(255, 255, 255, 0.8);
+  --citrus-submit-icon-color: #fff;
+  --citrus-input-bg-color: rgba(0, 0, 0, 0.4);
+  --citrus-input-icon-color: rgba(255, 255, 255, 0.3);
+  --citrus-input-focus-icon-color: #ffe142;
+  --citrus-input-focus-bg-color: rgba(0, 0, 0, 0.5);
+  --citrus-placeholder-color: rgba(255, 255, 255, 0.7);
+  --citrus-submit-color: #fff;
+  --marsh-start: #8dc26f;
+  --marsh-stop: #76b852;
+  --marsh-bg-color: #518336;
+  --marsh-color: rgba(255, 255, 255, 0.8);
+  --marsh-submit-icon-color: #fff;
+  --marsh-input-bg-color: rgba(0, 0, 0, 0.4);
+  --marsh-input-icon-color: rgba(255, 255, 255, 0.3);
+  --marsh-input-focus-icon-color: #86dd54;
+  --marsh-input-focus-bg-color: rgba(0, 0, 0, 0.5);
+  --marsh-placeholder-color: rgba(255, 255, 255, 0.7);
+  --marsh-submit-color: #fff;
+  --frost-start: #004e92;
+  --frost-stop: #000d7a;
+  --frost-bg-color: #00052d;
+  --frost-color: rgba(255, 255, 255, 0.8);
+  --frost-submit-icon-color: #fff;
+  --frost-input-bg-color: rgba(0, 0, 0, 0.4);
+  --frost-input-icon-color: rgba(255, 255, 255, 0.3);
+  --frost-input-focus-icon-color: #24b7ff;
+  --frost-input-focus-bg-color: rgba(0, 0, 0, 0.5);
+  --frost-placeholder-color: rgba(255, 255, 255, 0.7);
+  --frost-submit-color: #fff;
+  --bg-color: var(--barney-bg-color);
+  --color: var(--barney-color);
+  --start: var(--barney-start);
+  --stop: var(--barney-stop);
+  --submit-icon-color: var(--barney-submit-icon);
+  --input-bg-color: var(--barney-input-bg-color);
+  --input-icon-color: var(--barney-input-icon-color);
+  --input-focus-icon-color: var(--barney-input-focus-icon-color);
+  --input-focus-bg-color: var(--barney-input-focus-bg-color);
+  --placeholder-color: var(--barney-placeholder-color);
+  --submit-color: var(--barney-submit-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--color);
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 300ms ease-in-out;
+}
+
+form {
+    width:50%;
+    height:50%;
+}
+
+form input{
+    height:10%;
+    width:70%;
+    margin:5%;
+}
+
+
+form input  #submit{
+    width:40%;
+}
+
+
+input[type="Email"]::placeholder {
+    text-align: center;
+}
+
+input[type="Name"]::placeholder {
+    text-align: center;
+}
+
+input[type="Phone"]::placeholder {
+    text-align: center;
+}
+
+
+
+
+
+

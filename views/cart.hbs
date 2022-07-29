@@ -1,0 +1,350 @@
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/cart.css">
+<title>Clothify</title>
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbarstyle" style="background-color: rgb(0,128,128)">
+  <div>
+  <a class="navbar-brand" id="actives" href="home.html"><i class="fa fa-home"><b id="home"> Home</b></i></a>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+  <li class="nav-item dropdown">
+  <div class="btn-group" id="dropmenu">
+  <button type="button" class="btn btn-light"><b class="me">Items</b></button>
+  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+  <a class="dropdown-item explore" href="#">Men's Fashion</a>
+  <a class="dropdown-item explore" href="#">Clothing For Women</a>
+  <a class="dropdown-item explore" href="#">Best Kid's Clothing</a>
+  <a class="dropdown-item explore" href="About_us.html">The Indian Fashion</a>
+  <a class="dropdown-item explore" href="#">Italian Fashion Brands</a>
+  <div class="dropdown-divider explore"></div>
+  <a class="dropdown-item explore" href="#">Clothify Fashion House</a>
+  </div>
+  </div>
+  </li>
+  <li class="nav-item active">
+  <form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" id="home" placeholder="Search For Brands.." aria-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" id="actives" type="submit"><b id="home"> Search</b></button>
+  </form>
+  </li>
+  </ul>
+  <div>
+<a class="navbar-brand" id="actives" href="/Pages/cart"><i class="fa fa-cart-plus" aria-hidden="true"><b id="home"> Cart</b></i></a>
+<a class="navbar-brand" id="actives" href="/pages/product_add"><i class="fa fa-calendar" aria-hidden="true"><b id="home"> Sell</b></i></a>
+<a class="navbar-brand" id="actives" href="/Pages/login"><i class="fa fa-user" aria-hidden="true"><b id="home"> LogIn</b></i></a>
+    </div>
+  </div>
+  </nav>
+ 
+
+
+
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-10 col-11 mx-auto">
+<div class="row mt-5 gx-3">
+<!-- left side div -->
+<div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+<div class="card p-4">
+<h2 class="py-4 font-weight-bold">Cart (2 items)</h2>
+<div class="row">
+<!-- cart images div -->
+<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+<img src="img/202432302_g8.jpg" class="img-fluid" alt="cart img">
+</div>
+<!-- cart product details -->
+<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+<div class="row">
+<!-- product name  -->
+<div class="col-6 card-title">
+<h1 class="mb-4 product_name">Blue Zara Shirt</h1>
+<p class="mb-2">SHIRT - BLUE</p>
+<p class="mb-2">COLOR: BLUE</p>
+<p class="mb-3">SIZE: M</p>
+</div>
+<!-- quantity inc dec -->
+<div class="col-6">
+<ul class="pagination justify-content-end set_quantity">
+<li class="page-item">
+<button class="page-link " onclick="decreaseNumber('textbox','itemval')">
+<i class="fas fa-minus"></i> </button>
+</li>
+<li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox" >
+</li>
+<li class="page-item">
+<button class="page-link" onclick="increaseNumber('textbox','itemval')"> <i class="fas fa-plus"></i></button>
+</li>
+</ul>
+</div>
+</div>
+<!-- //remover move and price -->
+<div class="row">
+<div class="col-8 d-flex justify-content-between remove_wish">
+<p><i class="fas fa-trash-alt"></i> REMOVE ITEM</p>
+<p><i class="fas fa-heart"></i>MOVE TO WISH LIST </p>
+</div>
+<div class="col-4 d-flex justify-content-end price_money">
+<h3>$<span id="itemval">0.00 </span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr/>
+
+
+
+
+    <!-- 2nd cart product -->
+    <div class="card p-4">
+    <div class="row">
+    <!-- cart images div -->
+    <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+    <img src="img/cloth2.jpg" class="img-fluid" alt="cart img">
+    </div>
+    <!-- cart product details -->
+    <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+    <div class="row">
+    <!-- product name  -->
+    <div class="col-6 card-title">
+    <h1 class="mb-4 product_name">Green Zara Shirt</h1>
+    <p class="mb-2">SHIRT - Green</pt>
+    <p class="mb-2">COLOR: Green</p>
+    <p class="mb-3">SIZE: M</p>
+    </div>
+    <!-- quantity inc dec -->
+    <div class="col-6">
+    <ul class="pagination justify-content-end set_quantity">
+    <li class="page-item">
+    <button class="page-link " onclick="decreaseNumber('textbox1','itemval1')"> <i class="fas fa-minus"></i> </button>
+    </li>
+    <li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox1" >
+    </li>
+    <li class="page-item">
+    <button class="page-link" onclick="increaseNumber('textbox1','itemval1')"> <i class="fas fa-plus"></i></button>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <!-- //remover move and price -->
+    <div class="row">
+    <div class="col-8 d-flex justify-content-between remove_wish">
+    <p><i class="fas fa-trash-alt"></i> REMOVE ITEM</p>
+    <p><i class="fas fa-heart"></i>MOVE TO WISH LIST </p>
+    </div>
+    <div class="col-4 d-flex justify-content-end price_money">
+    <h3>$<span id="itemval1">0.00 </span> </h3>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    <!-- right side div -->
+    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+    <div class="right_side p-3 shadow bg-white">
+    <h2 class="product_name mb-5">The Total Amount Of</h2>
+
+    <div class="price_indiv d-flex justify-content-between">
+    <p>Product amount</p>
+    <p>$<span id="product_total_amt">0.00</span></p>
+    </div>
+    
+    <div class="price_indiv d-flex justify-content-between">
+    <p>Shipping Charge</p>
+    <p>$<span id="shipping_charge">50.0</span></p>
+    </div>
+
+
+    <hr />
+    <div class="total-amt d-flex justify-content-between font-weight-bold">
+    <p>Total Amount (including taxes) </p>
+    <p>$<span id="total_cart_amt">0.00</span></p>
+    </div>
+    <button class="btn btn-primary text-uppercase">Checkout</button>
+    </div> o
+    
+    
+    
+    <!-- discount code part -->
+    <div class="discount_code mt-3 shadow">
+    <div class="card">
+    <div class="card-body">
+
+
+    <a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Add a Coupon Code(optional)
+    <span><i class="fas fa-chevron-down pt-1"></i></span>
+    </a>
+
+
+
+    <div class="collapse" id="collapseExample">
+    <div class="mt-3">
+    <input type="text" name="" id="discount_code1" class="form-control font-weight-bold" placeholder="Enter your coupon code ">
+    <small id="error_trw" class="text-dark mt-3"></small>
+    </div>
+    <button class="btn btn-primary btn-sm mt-3" onclick="discount_code()">Apply</button>
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    <!-- discount code ends -->
+    <div class="mt-3 shadow p-3 bg-white">
+    <div class="pt-4">
+    <h5 class="mb-4">Expected delivery date</h5>
+    <p>July 27th 2020 - July 29th 2020</p>
+    </div>
+    </div>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+    
+    
+
+<footer class="footer">
+<div class="container">
+<div class="row">
+<div class="footer-col">
+<h4>Clothify</h4>
+<ul>
+<li><a href="#" id="address">Home</a></li>
+<li><a href="#" id="address">About</a></li>
+<li><a href="#" id="address">Pricing</a></li>
+<li><a href="#" id="address">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Get Help</h4>
+<ul>
+<li><a href="#" id="address">Returns</a></li>
+<li><a href="#" id="address">Contact Us</a></li>
+<li><a href="#" id="address">Order Status</a></li>
+<li><a href="#" id="address">Payment Options</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4 >Address</h4>
+<ul >
+<li><a href="#" id="address">6/3, P/3 Shastri Nagar<br>
+Agra, UP-
+282002<br><i class="fa fa-phone" aria-hidden="true"> 8967234511</i><br>
+<i class="fa fa-envelope" aria-hidden="true"> xyzz@gmail.com</i>
+</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>follow us</h4>
+<div class="social-links">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+var product_total_amt = document.getElementById('product_total_amt');
+var shipping_charge = document.getElementById('shipping_charge');
+var total_cart_amt = document.getElementById('total_cart_amt');
+var discountCode = document.getElementById('discount_code1');
+const decreaseNumber = (incdec, itemprice) => {
+var itemval = document.getElementById(incdec);
+var itemprice = document.getElementById(itemprice);
+console.log( itemprice.innerHTML);
+// console.log(itemval.value);
+if(itemval.value <= 0){
+itemval.value = 0;
+alert('Negative quantity not allowed');
+}else{
+itemval.value = parseInt(itemval.value) - 1;
+itemval.style.background = '#fff';
+itemval.style.color = '#000';
+itemprice.innerHTML  = parseInt(itemprice.innerHTML) - 15;
+product_total_amt.innerHTML  = parseInt(product_total_amt.innerHTML) - 15;
+total_cart_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+}
+}
+const increaseNumber = (incdec, itemprice) => {
+var itemval = document.getElementById(incdec);
+var itemprice = document.getElementById(itemprice);
+// console.log(itemval.value);
+if(itemval.value >= 5){
+itemval.value = 5;
+alert('max 5 allowed');
+itemval.style.background = 'red';
+itemval.style.color = '#fff';
+}else{
+itemval.value = parseInt(itemval.value) + 1;
+itemprice.innerHTML  = parseInt(itemprice.innerHTML ) + 15;
+product_total_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + 15;
+total_cart_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+}
+}
+
+
+const  discount_code = () => {
+let totalamtcurr = parseInt(total_cart_amt.innerHTML);
+let error_trw = document.getElementById('error_trw');
+if(discountCode.value === 'thapa'){
+let newtotalamt = totalamtcurr - 15;
+total_cart_amt.innerHTML = newtotalamt;
+error_trw.innerHTML = "Hurray! code is valid";
+}else{
+error_trw.innerHTML = "Try Again! Valid code is thapa";
+}
+}
+</script>
+
+
+</body>
+</html

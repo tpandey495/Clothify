@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+*{
+  margin:0px;
+  padding:0;
+  box-sizing: border-box;
+ }
+
+ /* Navbar */
+
+ #actives:hover{
+	background-color: rgb(255,0,128);
+}
+
+#actives:active{
+	border: 2px solid pink;
+}
+
+#actives:focus{
+	border-color: pink;
+	background-color: rgb(245,45,150);
+	color: black;
+}
+
+#actives{
+	width: 90px;
+	color: white;
+	font-size: 18px;
+	border: 1px solid white;
+	border-radius: 4px;
+	text-align: center;
+  padding: 4px;
+}
+
+.explore:link{
+	font-family: sans-sarif,Cambria,Arial;
+	font-size: 18px;
+}
+
+.explore:hover{
+	background-color: #ccc;
+}
+
+.explore:focus{
+	background-color: rgb(255,0,128);
+	color: white;
+}
+
+#dropmenu{
+	margin-right: 20px;
+	margin-top: 2px;
+}
+
+#home{
+  font-family: 'Lobster', cursive;
+  font-family: 'Righteous', cursive;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+}
+
+
+ .navbar .me{
+  color: rgb(104, 97, 97);
+  font-family: 'Lobster', cursive;
+  font-family: 'Righteous', cursive;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+
+ /* Style for carousel */
+
+ .carousel .carousel-img{
+   width:100%;
+    top:0px;
+   left:0px;
+   z-index:1;
+}
+
+@media only screen and (min-device-width: 700px){
+  #img{
+    width: 100%;
+    height: 615px;
+  }
+}
+
+  .carousel .left{
+  position:absolute;
+  top:40%;
+  left:0;
+  z-index:2;
+ }
+
+
+.carousel .right{
+  position:absolute;
+  top:40%;
+   right:0;
+   z-index:2;
+  }
+
+/* Animated Name */
+
+
+.neonText{
+  margin-top:5%;
+  color: rgb(119, 35, 101);
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 2.5em;
+  text-decoration: underline;
+  text-transform: capitalize;
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px rgb(206, 214, 133),
+      0 0 11px rgb(206, 214, 133),
+      0 0 19px rgb(206, 214, 133),
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+}
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+
+/* About Section */
+.container-fluid  .text{
+  margin-top:3%;
+  width:40%;
+  margin-left:auto;
+  margin-right:auto; 
+  font-family:sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+/* Product name */
+
+.product-name{
+  margin-top:5%;
+  font-size: 2.5em;
+  text-decoration: underline;
+  text-transform: capitalize;
+  text-align:center;
+}
+
+
+
+.btn-addtocart {
+  display: inline-block;
+  background-color: #7b38d8;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 20px;
+  vertical-align: middle;
+  padding: 10px;
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+/*first Row cards*/
+
+.first-div{
+transition:all 1.5s ease;
+overflow: hidden;
+justify-content: space-between;
+}
+
+.first-div .tp{
+  padding:3.1rem;
+  padding-bottom: 0.0rem;
+  padding-top: 1.0rem;
+}
+
+
+@media only screen and (min-device-width: 600px){
+.first-div .tp{
+  padding:7rem;
+  padding-bottom: 0px;
+  padding-top: 2.2rem;
+}
+}
+
+.first-div .card .card-img-top {
+  height:300px;
+  width:285px;
+}
+
+/*Second Row Card*/
+
+.second-div .tp1{
+  padding:3.1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  }
+@media only screen and (min-device-width: 600px){
+.second-div .tp1{
+padding:7rem;
+padding-bottom: 0.5rem;
+padding-top: 2.0rem;
+}
+}
+
+.second-div .card .card-img-top {
+  height:300px;
+  width:285px;
+}
+
+
+/*css for footer*/
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	text-align: justify;
+}
+
+.footer{
+	background-color: #0c8c96;
+  padding: 70px 0;
+}
+
+.footer-col{
+   width: 25%;
+   padding: 0 20px;
+}
+
+.footer-col h4{
+	font-size: 23px;
+	color: burlywood;
+	text-transform: capitalize;
+	margin-bottom: 15px;
+	position: relative;
+  font-family: 'Lobster', cursive;
+} 
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 2px;
+}
+
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: white;
+	text-decoration: none;
+	font-weight: 300;
+	color: white;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: white;
+	padding-left: 8px;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color:white;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+#address{
+  font-size: large;
+  font-family: 'Lobster', cursive;
+  font-family: 'Merriweather', serif;
+  font-family: 'Righteous', cursive;
+  font-family: 'Roboto Slab', serif;
+  font-family: 'Ubuntu', sans-serif;
+  word-spacing: 0.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
