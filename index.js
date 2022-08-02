@@ -3,7 +3,6 @@ const path=require('path');
 const app=express();
 const exphbs=require('express-handlebars');
 const fileUpload = require('express-fileupload');
-// const session = require('express-session');
 const  session = require('cookie-session');
 app.use(session({secret: 'mySecret', resave: false, saveUninitialized: false}));
 app.use(express.json());
@@ -20,8 +19,11 @@ const handlebars = exphbs.create({ extname: '.hbs',});
 app.set("view engine","hbs");
 
 // app.use(fileUpload());
+app.use('/product',require('./routes/productRoute').route);
 
-app.use('/pages',require('./routes/pages').route);
+app.use('/user',require('./routes/userRoute').route);
+
+app.use('/cart',require('./routes/cartRoute').route);
 
 app.listen(PORT,()=>{
     console.log("Searver started on http://localhost:4444");
