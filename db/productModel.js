@@ -1,7 +1,6 @@
 const connection=require('./model');
 
 // for product table
-
 function getAllProduct(){
     return new Promise(function (resolve,reject){
         connection.query(

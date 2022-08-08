@@ -1,25 +1,13 @@
 const connection=require('./model');
 
-
-
-connection.query(`select * from users`,function(err,rows,cols){
-    if(err){
-        console.log(err);
-    }
-    else{
-        console.log(rows);
-    }
-  });
-
-
-
-
 function isUser(email, password){
-    return new Promise(function (resolve,reject){
+    console.log(email,password);
+    return new Promise(function (reject,resolve){
         connection.query(
             `select * from users where Email='${email}' and password='${password}'`,
-            function(err,rows,cols){
+            function(err,rows){
                 if(err){
+                    console.log(err);
                     reject(err);
                 }
                 else{
@@ -31,6 +19,8 @@ function isUser(email, password){
 }
 
 
+
+
 function addNewPerson(Email,Name,Phone,password){
     
     return new Promise(function (resolve,reject){
@@ -39,6 +29,7 @@ function addNewPerson(Email,Name,Phone,password){
             [Email,Name,Phone,password],
             function(err,rows,cols){
                 if(err){
+                    
                     reject(err);
                 }
                 else{
@@ -50,7 +41,13 @@ function addNewPerson(Email,Name,Phone,password){
 }
 
 
+
+
+
+
+
+
 exports=module.exports={
     addNewPerson,
-    isUser
+    isUser,
 }
