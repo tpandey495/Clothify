@@ -1,5 +1,5 @@
 node_modules
-.env
+env
 upload
 tmp
 node_modules
