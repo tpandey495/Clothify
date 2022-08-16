@@ -17,6 +17,21 @@ function getAllProduct(){
 })
 }
 
+
+//search product By Id
+function getAllProductById(id){
+return new Promise(function(resolve,reject){
+    connection.query(`select * from product where Pro_id=${id}`,function(err,rows){
+    if(err){
+        reject(err);
+    }
+    else{
+        resolve(rows);
+    }
+    }) 
+})
+}
+
 //add new product
 
 function addNewProduct(name,product_type,imgurl,user_id,price,Date,Description){
@@ -38,7 +53,8 @@ function addNewProduct(name,product_type,imgurl,user_id,price,Date,Description){
 
 module.exports={
     getAllProduct,
-    addNewProduct
+    addNewProduct,
+    getAllProductById
   }
 
 

@@ -8,8 +8,8 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') })
 
 function getAllProduct(req,res){
 db.getAllProduct().then((products)=>{
-   console.log(products);
-    res.render('product',{products}); 
+   // console.log(products);
+   res.render('product',{products}); 
    })
    .catch((err)=>{
       res.send(err) 

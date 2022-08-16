@@ -25,17 +25,17 @@ function tologin(req,res){
 }
 
 
-function isUser(req,res){
+ function  isUser(req,res){
       let { username, password } = req.body;
-    const isUser = db.isUser(username, password).then()
-    console.log(isUser);
-    if(isUser.length != 0 && isUser[0]){
-        res.redirect(`/product/`)
-    }     
-    else{
-          res.redirect("/user/login");
+     db.isUser(username, password).then(()=>{
+       res.redirect('/user/product'); 
+    }).then(()=>{
+        res.redirect('/user');
+    }).catch((err)=>{
+        console.log(err);
+       res.redirect('/user/prduct');
+       })
     }
-}
 
 
 

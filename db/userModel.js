@@ -7,11 +7,11 @@ function isUser(email, password){
             `select * from users where Email='${email}' and password='${password}'`,
             function(err,rows){
                 if(err){
-                    console.log(err);
+                    console.log("aya hain err main");
                     reject(err);
                 }
                 else{
-                    resolve(rows);
+                    resolve();
                 }
             }
         )
@@ -29,11 +29,12 @@ function addNewPerson(Email,Name,Phone,password){
             [Email,Name,Phone,password],
             function(err,rows,cols){
                 if(err){
-                    
+                   
                     reject(err);
                 }
                 else{
-                    resolve();
+                   
+                    resolve(rows);
                 }
             }
         )

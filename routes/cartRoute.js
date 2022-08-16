@@ -1,11 +1,11 @@
 const route=require('express').Router();
-
+const controller=require('../controller/cartController');
 
 //for cart
-route.get("/",(_req,res)=>{
-      res.render('cart')
-})
+route.get("/",controller.cartview);
 
+//route.post
+route.post("/cartadd",controller.cartadd);
 
 exports=module.exports={
       route
