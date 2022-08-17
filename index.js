@@ -1,28 +1,43 @@
 const express=require('express');
-const path=require('path');
 const app=express();
 const exphbs=require('express-handlebars');
 const fileUpload = require('express-fileupload');
-// const session = require('express-session');
-const  session = require('cookie-session');
-app.use(session({secret: 'mySecret', resave: false, saveUninitialized: false}));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'));
-app.use(express.static('upload'));
 app.use(fileUpload({ useTempFiles: true }));
-
 const PORT = process.env.PORT || 4444;
+const path=require('path');
 
-// Template engine
-const handlebars = exphbs.create({ extname: '.hbs',});
-// app.engine('.hbs', handlebars.engine);
-app.set("view engine","hbs");
 
-// app.use(fileUpload());
 
-app.use('/pages',require('./routes/pages').route);
+// To setup handlebars
 
+var hbs = exphbs.create({
+    helpers: {
+        sayHello: function () { alert("Hello World") },
+        getStringifiedJson: function (value) {
+            return JSON.stringify(value);
+        }
+    },
+    defaultLayout: 'main',
+    partialsDir: ['views/partials/']
+});
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
+
+
+// setting diffrent route as middleware
+app.use('/product/cart',require('./routes/cartRoute').route);
+app.use('/product',require('./routes/productRoute').route);
+app.use('/user',require('./routes/userRoute').route);
+app.use('/cart',require('./routes/cartRoute').route);
+
+
+
+//app is listening on http://localhost:4444
 app.listen(PORT,()=>{
     console.log("Searver started on http://localhost:4444");
 })
