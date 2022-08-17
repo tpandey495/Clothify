@@ -7,20 +7,34 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'));
 app.use(fileUpload({ useTempFiles: true }));
 const PORT = process.env.PORT || 4444;
+const path=require('path');
 
-// Template engine
-const handlebars = exphbs.create({ extname: '.hbs',});
 
-//To set template engine
-app.set("view engine","hbs");
+
+// To setup handlebars
+
+var hbs = exphbs.create({
+    helpers: {
+        sayHello: function () { alert("Hello World") },
+        getStringifiedJson: function (value) {
+            return JSON.stringify(value);
+        }
+    },
+    defaultLayout: 'main',
+    partialsDir: ['views/partials/']
+});
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
+
 
 // setting diffrent route as middleware
 app.use('/product/cart',require('./routes/cartRoute').route);
-
 app.use('/product',require('./routes/productRoute').route);
-
 app.use('/user',require('./routes/userRoute').route);
 app.use('/cart',require('./routes/cartRoute').route);
+
 
 
 //app is listening on http://localhost:4444
