@@ -1,6 +1,10 @@
 const db=require('../db/userModel');
 var bcrypt = require('bcryptjs');
-
+var jwt = require('jsonwebtoken');
+const dotenv = require('dotenv');
+const path=require('path');
+const session = require('cookie-session');
+dotenv.config({ path: path.resolve(__dirname, '../.env') })
 
 //api for registration
 function register(_req,res){
@@ -44,14 +48,17 @@ async function compare(password, hashed) {
   return match
 }
 
+
   function  isUser(req,res){
     let {email, password } = req.body;
-     db.isUser(email).then(async(dbpass)=>{
-      console.log(dbpass);
-    const match=await compare(password, dbpass);
+     db.isUser(email).then(async(rows)=>{
+    const match=await compare(password, rows.password);
     if(match){
-      res.redirect("/product")
-    }
+   console.log(rows.user_id);
+   var token=jwt.sign({user_id:rows.user_id},'SECRET', { expiresIn: '1h' });
+   res.cookie("token",token);
+   res.redirect(`/product/?valid=${token}`)
+    } 
 else{
   res.send("wrong credentials");
 }

@@ -7,7 +7,7 @@ const connection=require('./model');
  function isUser(email){
     return new Promise(function(resolve,reject){
     connection.query(
-                `select password from users where email='${email}'`,
+                `select * from users where email='${email}'`,
                  (err, rows) => {
         if (err) {
           reject(err);
@@ -16,7 +16,7 @@ const connection=require('./model');
             if(rows.length>0){
                 var dbpass;
                 dbpass=rows[0].password;
-                resolve(dbpass);
+                resolve(rows[0]);
             }
          else{
             reject("user does'nt exist")
