@@ -8,7 +8,10 @@ connection.query(`select * from product JOIN cart ON  product.Pro_id=cart.produc
     reject(err);
   }
  else{
-     console.log(rows);
+  const obj={
+    length:rows.length
+  }
+     rows.push(obj);
      resolve(rows);
   }
    })

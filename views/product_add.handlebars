@@ -1,10 +1,82 @@
- <link rel="stylesheet" type="text/css" href="/css/product.css">
- <h2>Add Product  to Clothify</h2>
-    <form method="POST" action="product_add" enctype="multipart/form-data" /> 
-    <input type="text" name="product_name" placeholder="Enter product name" /><br>
-    <input type="text" name="product_type" placeholder="enter category" /><br>
-    <input type="file"  accept="image/*" name="samplefile" /><br>
-    <input type="number" name="price" placeholder="Enter your price of product " /><br>
-    <input type="text" name="desc" placeholder="Enter Description of product" /><br>
-    <input id="submit" type="submit">
-    </form>
+<link rel="stylesheet" href="../css/product_add.css">
+
+
+{{>nav}}
+{{>carousel}}
+<br>
+<br>
+
+
+<!--form section -->
+
+<div class="page row ml-auto mr-auto">
+
+  <div class="col-10 col-sm-8 col-md-4 group">
+  <h1>Clothify</h1>
+   <br>
+  <br>
+  <p>
+   <img src="../img/placeholder.png"> 6/3, P/3 Shastri Nagar<br>
+Agra, UP- 282002<br>
+ 8967234511
+ <br>
+  <img src="../img/smartphone.png"> Number. +91-12345678911<br>
+ <br>
+ <img src="../img/email.png"> Contact us merchantsupport.clothify@gmail.com<br>
+</p>
+</div>
+
+<div class="col-10 col-sm-8 col-md-6 form-group ml-auto mr-auto">
+
+<form method="POST" action="product_add" enctype="multipart/form-data">
+  
+<section>
+<label for="fname">Enter product name</label><br>
+<input type="text" id="fname" name="product_name"  />
+{{!-- <input type="text" id="fname" name="fname"> --}}
+</section>
+
+<section>
+<label for="lname">Enter Category</label><br>
+<input type="text" id="lname" name="product_type"  /><br>
+{{!-- <input type="number" id="lname" name="lname" > --}}
+</section>
+
+
+<section>
+<label for="fname">Enter Image</label><br>
+<input type="file" id="fname"  accept="image/*" name="samplefile" />
+{{!-- <input type="email" id="fname" name="fname"> --}}
+
+</section>
+
+<section>
+  <label for="lname">Price </label><br>
+  {{!-- <input type="country" id="lname" name="lname" > --}}
+   <input type="number" id="lname" name="price"  /><br>
+</section>
+
+{{!-- <section>
+<label for="lname">Country</label><br>
+<input type="text" id="lname" name="lname" >
+</section> --}}
+
+<section>
+  <label for="lname">Description</label><br>
+  {{!-- <input  id="query" type="text" id="lname" name="lname" > --}}
+  <input id="query"type="text" name="desc"  /><br>
+  </section>
+
+<section>
+<input id="submit" type="submit" value="Submit">
+</section>
+       </form>
+  </div>
+
+</div>
+
+
+<br>
+<br>
+<br>
+{{>footer}}

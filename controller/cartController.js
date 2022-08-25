@@ -3,8 +3,7 @@ const db=require('../db/cartModel');
 
 function cartview(_req,res){
     db.getProductfromcart().then((carts)=>{
-        console.log(carts);
-        res.render('cart',{carts});
+       res.render('cart',{carts});
     }).catch((err)=>{
         res.send({message:"err"+err});
     })
@@ -12,7 +11,6 @@ function cartview(_req,res){
 
 
 function cartadd(req,res){
-    console.log(req.body.answer);
     db.addProducttocart(req.body.answer)
     .then(()=>{
        res.redirect('/cart');

@@ -1,23 +1,36 @@
 const connection=require('./model');
 
-function isUser(email, password){
-    console.log(email,password);
-    return new Promise(function (reject,resolve){
-        connection.query(
-            `select * from users where Email='${email}' and password='${password}'`,
-            function(err,rows){
-                if(err){
-                    console.log("aya hain err main");
-                    reject(err);
-                }
-                else{
-                    resolve();
-                }
-            }
-        )
-    })
-}
 
+
+
+
+ function isUser(email){
+    return new Promise(function(resolve,reject){
+    connection.query(
+                `select password from users where email='${email}'`,
+                 (err, rows) => {
+        if (err) {
+          reject(err);
+        }
+        else {
+            if(rows.length>0){
+                var dbpass;
+                dbpass=rows[0].password;
+                resolve(dbpass);
+            }
+         else{
+            reject("user does'nt exist")
+         }
+      }
+      }
+ )
+    })
+    }
+
+    
+
+
+   
 
 
 
