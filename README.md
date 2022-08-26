@@ -1,4 +1,4 @@
-# Simple Ecommerce Website Template
+
 
 ## Responsive E-commerce Website  template containing catalog, filters, product page, shopping cart and other elements of the online store.
 
@@ -8,8 +8,6 @@ CSS  </br>
 Javascript </br>
 Node js <br/>
 Express js <br/>
-
-
 
 
 
