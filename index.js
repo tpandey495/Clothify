@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'));
 app.use(fileUpload({ useTempFiles: true }));
-const PORT = process.env.PORT || 4444;
+const PORT =process.env.PORT||4444;
 const path=require('path');
 var cookieParser=require('cookie-parser')
 
@@ -41,5 +41,5 @@ app.use('/cart',require('./routes/cartRoute').route);
 
 //app is listening on http://localhost:4444
 app.listen(PORT,()=>{
-    console.log("Searver started on http://localhost:4444");
+    console.log("Searver started on http://localhost:"+PORT);
 })

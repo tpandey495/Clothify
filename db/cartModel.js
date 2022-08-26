@@ -1,4 +1,4 @@
-const connection=require('./Model');
+const connection=require('./model');
 const product=require('./productModel');
 
 function getProductfromcart(user_id){
