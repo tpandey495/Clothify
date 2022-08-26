@@ -60,7 +60,22 @@ connection.query(`CREATE TABLE  IF NOT EXISTS product(
     }
 )
 
-
+connection.query(`CREATE TABLE  IF NOT EXISTS cart(
+	Pro_id INT NOT NULL,
+	user_id INT NOT NULL,
+	Date DATE NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    CONSTRAINT cart_info UNIQUE(pro_id,user_id)
+);`,function(err,rows,cols){
+        if(err){
+            console.log(err);
+        }
+        else{
+           console.log(rows);
+        }
+    }
+)
  
   
 

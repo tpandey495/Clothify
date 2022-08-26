@@ -36,7 +36,7 @@ await cloudinary.uploader.upload(file.tempFilePath, (err, result) => {
           filepath=result.url
           }
     );   
-    let user_id=1;
+    let user_id=req.user.user_id;
      let today=new  Date();
 var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 db.addNewProduct(req.body.product_name , req.body.product_type,filepath,user_id,req.body.price,date,req.body.desc)

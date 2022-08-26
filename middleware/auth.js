@@ -14,7 +14,7 @@ const verify = async(req, res, next)=>{
     return res.redirect("/user/login")
     }
     else{
-        console.log(user)
+       console.log(user);
         req.user = user
     }
       next()

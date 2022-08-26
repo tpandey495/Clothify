@@ -1,9 +1,9 @@
 const connection=require('./Model');
 const product=require('./productModel');
 
-function getProductfromcart(){
+function getProductfromcart(user_id){
 return new Promise(function(resolve,reject){
-connection.query(`select * from product JOIN cart ON  product.Pro_id=cart.product_id`,function(err,rows){
+connection.query(`select * from product JOIN cart ON  product.Pro_id=cart.pro_id AND cart.user_id=${user_id}`,function(err,rows){
    if(err){
     reject(err);
   }
@@ -19,9 +19,7 @@ connection.query(`select * from product JOIN cart ON  product.Pro_id=cart.produc
 }
 
 
-function addProducttocart(id){
-   const pro_id=id;
-    const user_id=1;
+function addProducttocart(pro_id,user_id){
     const date=new Date();
     const year=date.getFullYear();
     const month=date.getMonth();
@@ -29,7 +27,7 @@ function addProducttocart(id){
     const finaldate=`${year}-${month}-${day}`;
     console.log(pro_id,user_id,finaldate);
     return new Promise(function(resolve,reject){
-      connection.query(`INSERT INTO cart (product_id,user_id,Date) values(?,?,?)`,[pro_id,user_id,finaldate],function(err,rows){
+      connection.query(`INSERT INTO cart (pro_id,user_id,Date) values(?,?,?)`,[pro_id,user_id,finaldate],function(err,rows){
     if(err){
         reject(err);
     }
