@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Balsamiq+Sans:ital,wght@1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Balsamiq+Sans:ital,wght@1,700&family=Bebas+Neue&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+/* Global Designing */
+
+body{
+    background: color #e3e5e3;
+    height:100%;
+    background-color: #EEF3FA;
+    box-shadow: 9px 9px 16px 0px #A3B1C699;
+    box-shadow: -9px -9px 16px 0px #FFFFFF99;
+}
+
+
+h1{
+    font-family: 'Anton', sans-serif;
+    letter-spacing:3px;
+    color:black;
+}
+
+
+
+ /* style for main image */
+
+ /* .main-product{
+     border-bottom:3px solid blue;
+     padding:10%;
+     opacity:0.9;
+    background-image:url('../img/mainproduct.jpg');
+     background-repeat: no-repeat;
+    border-bottom-left-radius:12%;
+    border-bottom-right-radius:12%;
+    position:relative;
+} */
+
+.main-product h1{
+    color:white;
+    bottom:0;
+    left:0;
+    top:auto;
+    right:auto;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.main-product p{
+    color:white;
+    bottom:0;
+    left:0;
+    top:auto;
+    right:auto;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Balsamiq Sans', cursive; 
+}
+
+
+/*sytle for form section */
+.page{
+font-family: 'Andada Pro', serif;
+font-family: 'Roboto Slab', serif;
+font-size:20px;
+font-weight:400;
+}
+
+.page .group{
+    margin-left:8%;
+}
+
+.page .group img{
+    width:4vw;
+    height:8vh;
+}
+
+
+.page .form-group section{
+   display:inline-block;
+   padding:2%;
+   padding-left:5%;
+}
+
+.page .form-group section input{
+    border-radius:6px;
+}
+
+.page .form-group section #query{
+    height:100px;
+}
+
+.page .form-group section #submit{
+width:400%;
+height:200%;
+background-color:rgb(245, 20, 58);
+}
+
+
+
+
+

@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login page</title>
-  <link rel="stylesheet" type="text/css" href="/css/login.css">
-</head>
-<body>
-      <form method="POST" class="form" action="login">
-        <h1>Welcome Back</h1>
-        <p>Enter your credentials to continue.</p>
-  
-        <div class="input-wrapper">
-          <input type="text" name="username" placeholder="Enter your username" />
+<link rel="stylesheet" href="../css/login.css">
+
+{{>nav}}
+{{>carousel}}
+<br>
+<br>
+<br>
+<br> 
+<div class="text">
+<h3>Login To Clothify</h3>
+<h6>Enter your credentials to continue.</h6>
+</div>
+
+<div class="login-form">
+<form method="POST" class="form" action="login">
+       <div class="input-wrapper">
+          <input type="text" name="email" placeholder="Enter your username" />
           <i class="bx bxs-user-circle"></i>
         </div>
   
@@ -29,6 +30,10 @@
           </button>
         </div>
       </form>  
-         don't have account?  <button><a href="/user/add">Sign Up</a></button>
-</body>
-</html>
+  don't have account?  <button><a href="/user/register">Sign Up</a></button>
+</div>
+
+<br>
+<br>
+<br>
+{{>footer}}

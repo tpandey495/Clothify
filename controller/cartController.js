@@ -1,10 +1,9 @@
 const db=require('../db/cartModel');
+const auth=require("../middleware/auth");
 
-
-function cartview(_req,res){
-    db.getProductfromcart().then((carts)=>{
-        console.log(carts);
-        res.render('cart',{carts});
+function cartview(req,res){
+    db.getProductfromcart(req.user.user_id).then((carts)=>{
+       res.render('cart',{carts});
     }).catch((err)=>{
         res.send({message:"err"+err});
     })
@@ -12,8 +11,7 @@ function cartview(_req,res){
 
 
 function cartadd(req,res){
-    console.log(req.body.answer);
-    db.addProducttocart(req.body.answer)
+    db.addProducttocart(req.body.answer,req.user.user_id)
     .then(()=>{
        res.redirect('/cart');
     }).catch((err)=>{

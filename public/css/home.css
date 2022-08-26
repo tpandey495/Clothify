@@ -8,6 +8,16 @@
   box-sizing: border-box;
  }
 
+
+ body{
+  height:100%;
+  background-color: #EEF3FA !important;
+  box-shadow: 9px 9px 16px 0px #A3B1C699 !important;
+  box-shadow: -9px -9px 16px 0px #FFFFFF99 !important;
+}
+
+
+
  /* Navbar */
 
  #actives:hover{
@@ -135,6 +145,7 @@
 
 
 /* About Section */
+
 .container-fluid  .text{
   margin-top:3%;
   width:40%;
@@ -143,6 +154,12 @@
   font-family:sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
+}
+
+@media (max-width:750px ){
+  .container-fluid  .text{
+   width:80%;
+  }
 }
 
 /* Product name */
@@ -156,74 +173,155 @@
 }
 
 
+/* css for card */
 
-.btn-addtocart {
-  display: inline-block;
-  background-color: #7b38d8;
-  border-radius: 10px;
-  border: 4px double #cccccc;
-  color: #eeeeee;
-  text-align: center;
-  font-size: 20px;
-  vertical-align: middle;
-  padding: 10px;
-  width: 200px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-/*first Row cards*/
-
-.first-div{
-transition:all 1.5s ease;
-overflow: hidden;
-justify-content: space-between;
+.logo__container {
+  width: 50%;
+  margin-left: 20px;
 }
 
-.first-div .tp{
-  padding:3.1rem;
-  padding-bottom: 0.0rem;
-  padding-top: 1.0rem;
+.carrito__container {
+  width: 50%;
+}
+
+.carrito__container ul{
+  float: right;
+  margin-right: 30px;
 }
 
 
-@media only screen and (min-device-width: 600px){
-.first-div .tp{
-  padding:7rem;
-  padding-bottom: 0px;
-  padding-top: 2.2rem;
-}
+.submenu {
+  position: relative;
+  list-style-type: none;
+  width: 50%;
 }
 
-.first-div .card .card-img-top {
-  height:300px;
-  width:285px;
+.submenu #carrito{
+  display: none;
 }
 
-/*Second Row Card*/
-
-.second-div .tp1{
-  padding:3.1rem;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
+.submenu:hover #carrito{
+  display: block;
+  position: absolute;
+  right:0;
+  top:100%;
+  z-index: 1;
+  background-color: white;
   }
-@media only screen and (min-device-width: 600px){
-.second-div .tp1{
-padding:7rem;
-padding-bottom: 0.5rem;
-padding-top: 2.0rem;
-}
-}
 
-.second-div .card .card-img-top {
-  height:300px;
-  width:285px;
+.vacio {
+  padding: 10px;
+  background-color: crimson;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
 }
 
+.borrar-curso {
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
 
+#lista-cursos {
+  padding: 30px 0;
+}
+
+.encabezado__cursos{
+  margin-bottom: 30px;
+}
+
+
+.cursos__container{
+  margin-top: 30px;
+  display: grid;
+  grid-gap: 25px;
+    max-width: 1080px;
+    margin: 0 auto;
+  padding: 0 10px;
+}
+
+.curso__item{
+  border: 1px solid rgba(0,0,0,0.25);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card__img, .imagen__curso{
+  width: 100%;
+}
+
+.info__card{
+  padding: 10px 10px;
+  position: relative;
+  height: 110px;
+}
+
+.info__card *{
+  margin-bottom: 10px;
+}
+
+.precio{
+  text-decoration: line-through;
+  color: red;
+}
+
+.discount{
+  color: black;
+  font-weight: bold;
+  float: right;
+  font-size: 1.25em;
+}
+
+.agregar-carrito{
+  background: #00B2BD;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 0;
+}
+
+.agregar-carrito:hover{
+  background: #00828a;
+  color: white;
+}
+
+.fa{   
+   margin-bottom: 0;
+  }
+
+@media (min-width: 750px) {
+  header {
+    text-align: left;
+  }
+}
+
+@media (min-width: 472px) and (max-width: 767px) {
+  .cursos__container{
+    grid-template-columns: 1fr 1fr;
+   }
+ }
+
+ @media all and (min-width: 768px) {
+  .cursos__container{
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+ }
+ 
+ @media all and (min-width: 949px) {
+   .cursos__container{
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+ }
+
+ 
+ 
 /*css for footer*/
 
 .container{
@@ -322,6 +420,7 @@ li{
   font-family: 'Ubuntu', sans-serif;
   word-spacing: 0.1em;
 }
+
 
 
 

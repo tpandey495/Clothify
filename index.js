@@ -8,6 +8,7 @@ app.use(express.static('public'));
 app.use(fileUpload({ useTempFiles: true }));
 const PORT = process.env.PORT || 4444;
 const path=require('path');
+var cookieParser=require('cookie-parser')
 
 
 
@@ -28,6 +29,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
+app.use(cookieParser())
 
 // setting diffrent route as middleware
 app.use('/product/cart',require('./routes/cartRoute').route);

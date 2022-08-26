@@ -1,10 +1,21 @@
-<link rel="stylesheet" type="text/css" href="/css/add.css">
+<link rel="stylesheet" type="text/css" href="/css/register.css">
+{{>nav}}
+{{>carousel}}
+
+
+
    <h2>Welcome to Clothify</h2>
     <h3>Register</h3>
+    <div class="register-form">
     <form method="post" action="/user/register">
     <input type="Email" name="Email" placeholder="Enter your Email"  required><br>
     <input type="password" name="password" placeholder="Enter your Password"  required><br>
     <input type="Name" name="Name" placeholder="Enter your name"  required><br>
-    <input type="tel" id="Phone" name="Phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    <input type="tel" id="Phone" name="Phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
     <input id="submit" type="submit">
 </form>
+</div>
+
+<br><br><br>
+
+{{>footer}}
