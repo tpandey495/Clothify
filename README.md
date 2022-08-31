@@ -10,16 +10,42 @@ Node js <br/>
 Express js <br/>
 
 
+## Project Structure
+```
+├── controllers         # functions to connect routes to db operations
+├── db                  # db connection and model definitions
+├── views              HTML files for static part of site
+├── public              js/css files for static part of site
+└── routes              # express middlewares (route wise)
+├── middleware              middleware  for autherizating user
+```
+
+## Business Logic 
+
+### userController
+
+1. **register** 
+    This will create a new user with a random username and will encrypt the password using bycrypt.js
+
+2. **isUser**
+This will check whehter user id and password right or not.
+
+### productController
+
+1. **getAllProduct**
+To get all product from the database
+
+2. **addNewProduct**
+To add new product  to database
+
+### cartModel
+1. **addProducttocart**
+To add new product  to cart
 
 
 
 
-![screencapture-localhost-5501-home-html-2021-09-03-17_27_05](https://user-images.githubusercontent.com/67863031/132003833-01597545-78eb-4b4d-bc8f-ad6ae854dbf0.png)
 
-
-
-
-![screencapture-localhost-5501-cart-html-2021-09-03-17_46_47](https://user-images.githubusercontent.com/67863031/132004065-528c348b-f914-4810-9df2-0b17829d39d4.png)
 
 
 

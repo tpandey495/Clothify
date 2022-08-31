@@ -36,6 +36,7 @@ app.use('/product/cart',require('./routes/cartRoute').route);
 app.use('/product',require('./routes/productRoute').route);
 app.use('/user',require('./routes/userRoute').route);
 app.use('/cart',require('./routes/cartRoute').route);
+app.use('/',require('./routes/productRoute').route);
 
 
 

@@ -7,12 +7,12 @@ const session = require('cookie-session');
 dotenv.config({ path: path.resolve(__dirname, '../.env') })
 
 //api for registration
-function register(_req,res){
+function registerview(_req,res){
     res.render('person_add')
 }
 
 
-async function register1(req,res){
+async function register(req,res){
     const password=req.body.password;
     //encryptig password
     bcrypt.genSalt(10, function(err, salt) {
@@ -73,8 +73,8 @@ res.send("user does'nt exist");
 
 
 exports=module.exports={
+  registerview,
   register,
-  register1,
   tologin,
   isUser
 }
