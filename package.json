@@ -1,6 +1,6 @@
 {
   "name": "Clothify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,6 @@
     "node-localstorage": "^2.2.1",
     "nodemon": "^2.0.16",
     "npm": "^7.24.2",
-    "nvm": "^0.0.4",
-    "sequelize": "^6.21.3"
+    "nvm": "^0.0.4"
   }
 }
