@@ -1,18 +1,36 @@
-.text h3,h6{
-  text-align:center;
-}
-
-
-.login-form{
-  margin-top:3%;
+h3{
   text-align:center; 
 }
 
+.text {
+  width:30%;
+  background-color:white;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+@media only screen and (max-width: 700px){
+  .text{
+    width:80%;
+  }
+}
+
+.text h6{
+  text-align:center;
+}
+
+.login-form{
+     width:80%;
+     margin-top:3%;
+     text-align:center; 
+ }
+
 .login-form .input-wrapper {
-margin:2%;
+ margin:2%;
 }
 
 .login-form .input-wrapper input{
-  width:20%;
-  height:5%;
+  text-align:center;
+  width:80%;
+  height:2em;
 }

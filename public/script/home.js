@@ -42,3 +42,12 @@ console.log(id);
 const response=await postData('/cart/cartadd', { answer: id});
 console.log(response);
 }
+
+// to count no of product
+
+
+function productcount(){
+    fetch('/cart/cartview')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+}

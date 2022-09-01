@@ -1,37 +1,36 @@
 h2,h3{
-    margin-top:2%;
+    text-align:center; 
+  }
+  
+.register-form{
+    width:30%;
+    background-color:white;
+    margin-right:auto;
+    margin-left:auto;
+  }
+  
+  @media only screen and (max-width: 700px){
+    .register-form{
+      width:80%;
+    }
+  }
+  
+  .register-form .input-wrapper {
+     text-align:center;
+     margin-top:5%;
+  }
+  .register-form .input-wrapper label{
+ font-size:medium;
+ font-weight:400;
+ }
+  
+  .register-form .input-wrapper input{
+    line-height:2rem;
     text-align:center;
-}
-
-
-.register-form {
- text-align:center;
-}
-
-.register-form input{
-    height:15%;
-    width:25%;
-    margin:2%;
-    text-align:center;
-}
-
-
-.register-form input[type="Email"]::placeholder {
-    text-align: center;
-}
-
-.register-form input[type="Name"]::placeholder {
-    text-align: center;
-}
-
-.register-form input[type="Phone"]::placeholder {
-    text-align: center;
-}
-
-.register-form input  #submit{
-    width:20%;
-    text-align:center;
-}
-
-
-
+    width:80%;
+    height:2em;
+  }
+  
+  .register-form .input-wrapper #submit{
+    background-color:rgb(57, 57, 77);
+  }

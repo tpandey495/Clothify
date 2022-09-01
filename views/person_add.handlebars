@@ -6,15 +6,35 @@
 
    <h2>Welcome to Clothify</h2>
     <h3>Register</h3>
+
     <div class="register-form">
     <form method="post" action="/user/register">
+   
+    <div class="input-wrapper">
+     <label for="email">Email Address</label><br>
     <input type="Email" name="Email" placeholder="Enter your Email"  required><br>
+    </div>
+
+    <div class="input-wrapper">
+     <label for="password">Password</label><br>
     <input type="password" name="password" placeholder="Enter your Password"  required><br>
+    </div>
+
+    <div class="input-wrapper">
+    <label for="name">Name</label><br>
     <input type="Name" name="Name" placeholder="Enter your name"  required><br>
+    </div>
+
+    <div class="input-wrapper">
+    <label for="phone">Phone Number</label><br>
     <input type="tel" id="Phone" name="Phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+    </div>
+    <br>
+    <div class="input-wrapper">
     <input id="submit" type="submit">
-</form>
-</div>
+    </div>
+     </form>
+    </div>
 
 <br><br><br>
 
