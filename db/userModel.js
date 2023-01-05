@@ -55,12 +55,6 @@ function addNewPerson(Email,Name,Phone,password){
 }
 
 
-
-
-
-
-
-
 exports=module.exports={
     addNewPerson,
     isUser,
